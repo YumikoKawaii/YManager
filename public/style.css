@@ -21,3 +21,84 @@
     font-size: 30px;
 }
 
+.profileBackground {
+    width: 100%;
+    height: 300px;    
+    min-width: 500px;
+    padding: 0;
+}
+
+.backgroundImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profileBasicInfo {
+    width: 100%;
+    height: 200px;
+    min-width: 500px;
+    padding:0;
+    background-color: aquamarine;    
+}
+
+.name {
+    width: 200px;
+    height: 50px;
+    background-color: bisque;
+    top: 370px;
+    left: 40px;       
+}
+
+.email {   
+    height: 30px;
+    background-color: azure;
+    top: 430px;
+    left: 40px;
+}
+
+.phone {
+    height: 30px;
+    top: 465px;
+    left: 40px;
+}
+
+.profileAvatar {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: aqua;
+    top: 150px;    
+    left: 5%;
+    overflow: hidden;
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    vertical-align: middle;   
+}
+
+.avatar {
+    width: 380px;
+    clip-path: circle();  
+    object-fit: cover;  
+    padding: 5%;
+}
+
+.experience {
+    width: 100%;
+    height: 400px;
+    background-color: aquamarine;
+    padding: 0;
+}
+
+.education {
+    height: 300px;
+    background-color: blue;
+    padding: 0;
+}
+
+.certificate {
+    height: 300px;
+    background-color: azure;
+    padding: 0;
+}
