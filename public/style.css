@@ -102,3 +102,58 @@
     background-color: azure;
     padding: 0;
 }
+
+.miniAvatarContainer {
+    width: 40px;
+    height: 40px;   
+    border-radius: 50%;
+    background-color: aqua;    
+    overflow: hidden;
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    vertical-align: middle;
+}
+
+.miniAvatar {
+    width: 80px;
+    clip-path: circle();  
+    object-fit: cover;  
+    padding: 5%;
+
+}
+
+.jobList {
+    margin-top: 30px;
+    background-color: aqua;
+}
+.Job {
+    margin-top: 10px;
+    background-color: aliceblue;
+}
+
+.companyLogoContainer {
+    height: 100px;
+    width: 150px;
+}
+
+.companyLogo {
+    height: 100%;
+    width: 100%;
+}
+
+.recruiter {
+    top: 10px;
+    left: 170px;
+    font-weight: bold;
+}
+
+.shortDescription {
+    top: 40px;
+    left: 170px;
+}
+
+.income {
+    top: 70px;
+    left: 170px;
+}
