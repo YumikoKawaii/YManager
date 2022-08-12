@@ -46,20 +46,20 @@
     width: 200px;
     height: 50px;
     background-color: bisque;
-    top: 370px;
+    top: 350px;
     left: 40px;       
 }
 
 .email {   
     height: 30px;
     background-color: azure;
-    top: 430px;
+    top: 410px;
     left: 40px;
 }
 
 .phone {
     height: 30px;
-    top: 465px;
+    top: 445px;
     left: 40px;
 }
 
@@ -69,7 +69,7 @@
     border-radius: 50%;
     background-color: aqua;
     top: 150px;    
-    left: 5%;
+    left: 40px;
     overflow: hidden;
     display: flex; 
     align-items: center; 
@@ -130,6 +130,10 @@
 .Job {
     margin-top: 10px;
     background-color: aliceblue;
+}
+
+.profileAbout {
+    padding: 0;
 }
 
 .companyLogoContainer {
