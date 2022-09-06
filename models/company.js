@@ -4,8 +4,8 @@ const Schema = mongoose.Schema;
 
 const companySchema = new Schema({
     logo: {
-        url: String,
-        default: "abcd"
+        type: String,
+        default: 'abcd'
     },
     name: {
         type: String,

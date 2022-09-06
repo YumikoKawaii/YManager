@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>YManager | Login</title>
+  <title>YManager | Signup</title>
 
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
     integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
@@ -13,34 +13,40 @@
 
 <body class="d-flex flex-column vh-100 loginBackground">
 
-
-  
-
   <div class="loginBox">
-    <div class = "loginLogo mb-3">
+    <div class="loginLogo mb-3">
       <p>YManager</p>
     </div>
-    <div class = "mb-5">
-      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione ullam 
-      numquam ut ad, atque tempore, veritatis obcaecati fugiat reiciendis eos 
+    <div class="mb-3">
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione ullam
+      numquam ut ad, atque tempore, veritatis obcaecati fugiat reiciendis eos
       harum dicta fuga rem voluptatibus ducimus nihil aspernatur odio. Repudiandae.
     </div>
+    <div class="mb-5">
+      Join now for free skin!
+    </div>
 
-    <form action='/' method = "get">
+    <form formaction='/signup' method="post">
+      <div class="mb-3">
+        <label for="firstName" class="form-label">Firstname</label>
+        <input type="text" class="form-control" id="firstName" name="user[firstName]">
+      </div>
+      <div class="mb-3">
+        <label for="lastName" class="form-label">Lastname</label>
+        <input type="text" class="form-control" id="lastName" name="user[lastName]">
+      </div>
       <div class="mt-3 mb-3">
         <label for="email" class="form-label">Email address</label>
-        <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
+        <input type="email" class="form-control" id="email" aria-describedby="emailHelp" name="user[email]">
       </div>
       <div class="mb-3">
         <label for="password" class="form-label">Password</label>
-        <input type="password" class="form-control" id="password">
+        <input type="password" class="form-control" id="password" name="user[password]">
       </div>
-      <div id="emailHelp" class="form-text mb-3"> <a href="forgotpw.ejs">Forgot password</a> </div>
-      <div><button type="submit" class="btn btn-success mb-3 btn-lg btn-block">Login</button></div>
-      <span id="emailHelp" class="mt-3 mb-3 mr-5">Don't have an account?</span>
-      <span><button formaction="\signup" class="btn btn-primary mb-3 mt-3 btn-lg" style="width:30%">Signup</button></span>
+      <div><button type="submit" class="btn btn-primary mb-3 mt-4 btn-lg btn-block">Signup</button></div>
     </form>
-
+    <span id="emailHelp" class="mt-3 mb-3 mr-5">Already have an account?</span>
+    <span><a href = "/signin"><button class="btn btn-success mb-3 mt-3 btn-lg" style="width:30%">Login</button></a></span>
 
   </div>
 

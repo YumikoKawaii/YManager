@@ -4,6 +4,8 @@ const ejsMate = require('ejs-mate')
 const mongoose = require('mongoose')
 const bodyParser = require('body-parser')
 const Employee = require('./models/employee')
+const homepageRoutes = require('./routes/homepage')
+const employeeRoutes = require('./routes/employee')
 
 const server = express()
 
@@ -26,21 +28,15 @@ server.set('view engine', 'ejs')
 server.set('views', path.join(__dirname, 'views'))
 server.use(express.static('public'))
 
-server.get('/', (req, res) => {    
-    res.render('login/homepage')
+server.use('/', homepageRoutes)
+server.use('/profile', employeeRoutes)
+
+server.get('/', (req, res) => {
+    res.render('homepage')
 })
 
-server.get('/:id', (req, res) => {
-    console.log(req.params.id)    
-    const path = 'login/' + req.params.id;
-    res.render(path)
-})
-
-server.post('/signup',async (req, res) => {
-    const employee = new Employee(req.body.user)
-    await employee.save()
-    console.log('data db.saved')
-    res.redirect('homepage')
+server.use('*', (req, res) => {
+    res.render('homepage')
 })
 
 server.listen(3000, () => {

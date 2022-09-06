@@ -1,5 +1,8 @@
 const mongoose = require('mongoose')
 const Company = require('./company')
+const Education = require('./education')
+const Skill = require('./skill')
+const Experience = require('./experience')
 const Schema = mongoose.Schema;
 
 const employeeSchema = new Schema({
@@ -7,70 +10,34 @@ const employeeSchema = new Schema({
         type: String,
         default: 'acd'
     },
-    name: {
-        firstname: {
-            type: String,
-            required: true
-        },
-        lastname: {
-            type: String,
-            required: true
-        }
+    firstName: {
+        type: String,
+        required: true
     },
-    email: String,
+    lastName: {
+        type: String,
+        required: true
+    },
+    email: {
+        type: String,
+        required: true
+    },
+    password: {
+        type: String,
+        required: true
+    },
     phone: String,
     experience: [{
-        company: {
-            type: Schema.Types.ObjectId,
-            required: true,
-            ref: 'Company'
-        },
-        position: {
-            type: String,
-            required: true
-        },
-        startDate: {
-            type: Date,
-            required: true
-        },
-        endDate: {
-            type: Date,
-            required: true
-        }
+        type: Schema.Types.ObjectId,
+        ref: 'Experience'
     }],
     education: [{
-        school: {
-            type: Schema.Types.ObjectId,
-            required: true,
-            ref: 'Company'
-        },
-        degree: {
-            type: String,
-            required: true
-        },
-        field: {
-            type: String,
-            required: true
-        },
-        startDate: {
-            type: Date,
-            required: true
-        },
-        endDate: {
-            type: Date,
-            required: true
-        }
+        type: Schema.Types.ObjectId,
+        ref: 'Education'
     }],
     skill: [{
-        skill: {
-            type: String,
-            required: true
-        },
-        place: {
-            type: Schema.Types.ObjectId,
-            required: true,
-            ref: 'Company'
-        }
+        type: Schema.Types.ObjectId,
+        ref: 'Skill'
     }]
 })
 
